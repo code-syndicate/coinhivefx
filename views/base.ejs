@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        [/- include('__externals__.ejs'); /]
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>[/= siteName/] | [/= tagline /]</title>
+    </head>
+
+    <script>
+        $(document).ready(() => {
+
+            $('#openMenu').click(() => {
+
+                $('#menu').slideDown('fast');
+                $('#menu').css({ 'display': 'flex' })
+            })
+
+            $('#closeMenu').click(() => {
+
+                $('#menu').css({ 'display': 'flex' })
+                $('#menu').slideUp('fast');
+            })
+
+            $('#openBtc').click(() => {
+
+                $('#btc').fadeIn('fast');
+            })
+
+
+
+
+
+
+        })
+
+
+    </script>
+
+
+
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+1(609) 316-0048", // WhatsApp number
+            call_to_action: "Message us", // Call to action
+            button_color: "#FF6550", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->
+
+    <body class='bg-black'>
+        [/- include('__header__.ejs') /]
+
+        <!-- Details -->
+        <div id='btc'
+             class='fixed hidden top-4 left-0 right-0 mx-auto   bg-white md:max-w-4xl z-30 pb-6'>
+            <div class='relative p-4'>
+
+                <i onclick="this.parentElement.parentElement.style.display = 'none'"
+                   class='bi-x text-xl absolute top-0 right-0 p-2 inline-block bg-gray-100 hover:bg-gray-300 text-black  cursor-pointer rounded-tr '></i>
+
+
+                <img src='/img/qr.png'
+                     width='400'
+                     height='400'
+                     class='object-cover mx-auto block'
+                     alt='details' />
+
+                <br />
+                <p class='ml-4 text-center text-sm text-black  '>
+                    Copy the address below or scan the QR </p>
+                <br />
+                <p class=' text-center text-sm text-black font-bold '>
+                    [/=BTC /] </p>
+
+            </div>
+
+
+        </div>
+
+        <!-- InfoBoard  -->
+
+        [/ let textToShow = req.flash('info') /]
+
+
+        [/ if (textToShow.length) { /]
+        <div class='fixed top-4 left-0 right-0 mx-auto  rounded bg-white md:max-w-2xl z-30 pb-6'>
+            <div class='relative p-4'>
+
+
+                <i
+                   class='bi-info-circle text-xl absolute top-0 left-0 p-2 inline-block  rounded-l   rounded-t'></i>
+
+                <i onclick="this.parentElement.parentElement.style.display = 'none'"
+                   class='bi-x text-xl absolute top-0 right-0 p-2 inline-block bg-gray-100 hover:bg-gray-300 text-black  cursor-pointer rounded-tr '></i>
+
+                <br /><br />
+                <p class='ml-4 text-left text-xl text-blue-500 '> [/= textToShow/] </p>
+
+            </div>
+
+
+        </div>
+        <!-- Info  -->
+
+        [/ } /]
+
+        <div class='relative'>
+
+            <img src='/img/q1.jpg'
+                 class='object-cover w-screen md:w-full h-48 md:h-96 '
+                 width='1000'
+                 height='500'
+                 alt='bg' />
+
+
+               
+
+
+            <!-- Conditional Template Inclusion  -->
+            [/ if ( templateType === 'dashboard'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-speedometer2'></i>
+                Dashboard
+            </p>
+            [/ } /]
+
+
+            [/ if ( templateType === 'transactions'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-journal-album'></i>
+                Transactions
+            </p>
+            [/ } /]
+
+
+            [/ if (templateType === 'deposits'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-cash-stack'></i>
+                Deposits
+            </p>
+            [/ } /]
+
+
+            [/ if (templateType === 'notifications'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-bell'></i>
+                Notifications
+            </p>
+            [/ } /]
+
+            [/ if (templateType === 'withdrawals'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-download'></i>
+                Withdrawals
+            </p>
+            [/ } /]
+
+            [/ if (templateType === 'settings'){ /]
+            <p
+               class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 rounded-xl absolute top-8 bg-white text-black left-6 md:left-10'>
+                <i
+                   class='bi-sliders'></i>
+                Settings
+            </p>
+            [/ } /]
+
+
+
+
+
+
+        </div>
+
+        <main style="background-image: url('/img/q8.jpg');background-position: center;background-repeat: no-repeat;background-attachment: scroll;" class='  md:mx-4 md:my-16'>
+
+            <div
+                 class='flex flex-col md:flex-row items-center justify-center md:justify-around md:space-x-8 '>
+
+                <div class='w-1/4 bg-gray-100/50 self-start min-h-screen pb-16 hidden md:block '>
+
+                    <div>
+
+                        <div>
+                            <img src="[/= user.avatar || '/07.png' /]"
+                                 height="300"
+                                 width="200"
+                                 alt='Avatar'
+                                 class="rounded-full block mx-auto my-4 border-4 border-gray-300" />
+
+                            <h2
+                                class='font-semibold text-center text-black px-1 text-xl md:text-2xl capitalize'>
+                                [/= auth.user ? auth.user.firstname + ' ' + auth.user.lastname :
+                                "Anonymous Anonymous" /] </h2>
+                            <p class=' text-center px-1 text-base md:text-lg '>
+                                [/= auth.user ? auth.user.email : "Anonymous " /] </p>
+                        </div>
+
+                        <div class='flex flex-col  justify-center items-center rounded mt-8 '>
+
+                            <a href="[/=appUrl/]/?component_ref=dashboard"
+                               class='py-4 hover:bg-gray-300  capitalize block w-full text-left text-xl px-6
+
+                               [/ if (templateType==="dashboard") { /]
+                               bg-blue-500 text-white
+                               [/}/]
+
+                               '>
+                                <i class='
+                               bi-speedometer2
+                               text-xl
+                               px-2'></i>
+                                Dashboard
+                            </a>
+                            <a href="[/=appUrl/]/?component_ref=transactions"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6
+
+                                                            [/ if (templateType==="transactions") { /]
+                                                           bg-blue-500 text-white
+                                                           [/}/]
+
+                                                           '>
+                                <i class='bi-journal-album text-xl px-2'></i>
+                                Transactions
+                            </a>
+
+                            <a href="[/=appUrl/]/?component_ref=deposits"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6
+
+                                [/ if (templateType==="deposits") { /]
+                               bg-blue-500 text-white
+                               [/}/]
+
+                               '>
+                                <i class='bi-cash-stack text-xl px-2'></i>
+                                Deposit history
+                            </a><a href="[/=appUrl/]/?component_ref=withdrawals"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6
+
+                                [/ if (templateType==="withdrawals") { /]
+                               bg-blue-500 text-white
+                               [/}/]
+                               '>
+                                <i class='bi-download text-xl px-2'></i>
+                                Withdrawal history
+                            </a><a href="[/=appUrl/]/?component_ref=notifications"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6
+                                [/ if (templateType==="notifications") { /]
+                               bg-blue-500 text-white
+                               [/}/]
+
+                               '>
+                                <i class='bi-bell text-xl px-2'></i>
+                                Notifications
+                            </a>
+                            </a><a href="[/=appUrl/]/?component_ref=settings"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6
+
+                                [/ if (templateType==="settings") { /]
+                               bg-blue-500 text-white
+                               [/}/]
+                               '>
+                                <i class='bi-sliders text-xl px-2'></i>
+                                Settings
+                            </a>
+                            </a><a href="/banking/authentications/log-out/"
+                               class='py-4 hover:bg-gray-300 capitalize block w-full text-left text-xl px-6  '>
+                                <i class='bi-box-arrow-left text-xl px-2'></i>
+                                Log out
+                            </a>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class='w-full md:w-full md:flex-1 self-center md:self-start '>
+
+
+                    <div
+                         class='hidden md:flex flex-row justify-center md:justify-between items-center py-6 px-12 bg-gray-100/50'>
+
+                        <div class='w-full md:w-4/12 relative'> <input type='text'
+                                   name='search'
+                                   class='py-3 pl-8 w-full bg-white/60  pr-8 rounded-lg outline-none ring-1 ring-gray-300'
+                                   placeholder='Search  transactions' />
+
+
+                            <i
+                               class='bi-search inline-block absolute text-lg cursor-pointer  px-2 py-1 top-2 right-2 bg-gray-700/50 text-white rounded-full'></i>
+
+                        </div>
+                        <div>
+
+                            <div class='relative inline-block'
+                                 title='[/= notificationCount /] notification(s)'>
+                                <a href='[/=appUrl/]/?component_ref=notifications'>
+                                <i
+                                   class='bi-bell hidden md:inline-block text-xl inline-block px-3 py-2 bg-gray-700/50 text-white rounded-full'></i>
+                                </a>
+                                <span
+                                      class='bg-blue-500  hidden md:inline-block text-sm absolute bottom-9 right-1 text-white rounded-full px-2'>
+                                    [/= notificationCount > 0 ? notificationCount : null /] </span>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;
+                            <a class='hidden md:inline-block'
+                               href='[/=appUrl/]/?component_ref=settings'><i
+                                   title="[/= auth.user.firstname + ' ' + auth.user.lastname /]"
+                                   class='bi-person text-xl inline-block px-3 py-2 bg-gray-700/50 text-white rounded-full'></i></a>
+
+                        </div>
+
+                    </div>
+
+                    [/ if (templateType !== 'notifications' && templateType !== 'settings' &&
+                    templateType !== 'transactions' && templateType !== 'email-verification'){ /]
+
+
+
+                    <div
+                         class='flex   flex-col md:flex-row justify-center md:justify-evenly space-y-1 md:space-y-0 md:space-x-8 items-center  md:mt-6'>
+
+
+                        <div class='py-16 bg-gray-700/50 md:bg-white/30  w-full   flex-1 mx-auto text-center  '>
+                            <div
+                                 class='flex flex-row justify-between px-12 self-center items-center'>
+                                <p class='text-center text-xl md:text-2xl inline-block font-bold text-white lg:text-black'>
+                                    Wallet
+                                    <br>
+                                    <span class='py-2 text-xl'> $[/= req.user.wallet /]
+                                    </span>
+                                </p>
+                                <i
+                                   class='bi-wallet2    text-2xl  md:text-4xl inline-block px-5 py-4 bg-black text-white rounded-full'></i>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class='py-16 bg-gray-700/50 md:bg-white/30  w-full flex-1 mx-auto text-center '>
+                            <div
+                                 class='flex flex-row justify-between px-12 self-center items-center'>
+                                <p class='text-center text-xl font-bold md:text-2xl inline-block  text-white lg:text-black'>
+                                    Bonus
+                                    <br>
+                                    <span class='py-2 text-xl'> $[/= req.user.bonus /] </span>
+                                </p>
+                                <i
+                                   class='bi-graph-up     text-2xl md:text-4xl inline-block px-5 py-4 bg-black text-white rounded-full'></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                         class='flex  flex-col md:flex-row justify-center md:justify-around space-y-1 md:space-y-0 justify-evenly md:space-x-8 items-center mt-1  md:mt-6'>
+
+                        <div class='py-16  bg-gray-700/50 md:bg-white/30  w-full flex-1 mx-auto text-center '>
+                            <div
+                                 class='flex flex-row justify-between px-12 self-center items-center'>
+                                <p class='text-center font-bold text-xl md:text-2xl inline-block  text-white lg:text-black'>
+                                    Total Withdrawal
+                                    <br>
+                                    <span class='py-2 text-xl'> $[/= req.user.withdrawals /]
+                                    </span>
+                                </p>
+                                <i
+                                   class='bi-download      text-2xl md:text-4xl inline-block px-5 py-4 bg-black text-white rounded-full'></i>
+                            </div>
+                        </div>
+
+                        <div class='py-16 bg-gray-700/50 md:bg-white/30  w-full flex-1 mx-auto text-center '>
+                            <div
+                                 class='flex flex-row justify-between px-12 self-center items-center'>
+                                <p class='text-center text-xl font-bold md:text-2xl inline-block  text-white lg:text-black'>
+                                    Profit
+                                    <br>
+                                    <span class='py-2 text-xl'> $[/= req.user.profits /]
+                                    </span>
+                                </p>
+                                <i
+                                   class='bi-currency-exchange  text-2xl  md:text-4xl inline-block px-5 py-4 bg-black text-white rounded-full'></i>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    [/}/]
+                    
+      
+
+                    [/ if ( templateType === 'dashboard'){ /]
+                    [/- include('__tx_logs__.ejs'); /]
+                    [/ } /]
+
+                    [/ if ( templateType === 'transactions'){ /]
+                    [/- include('__transactions__.ejs'); /]
+                    [/ } /]
+
+                    [/ if ( templateType === 'email-verification'){ /]
+                    [/- include('__verifyemail__.ejs'); /]
+                    [/ } /]
+
+
+                    [/ if (templateType === 'deposits'){ /]
+                    [/- include('__deposit_logs__.ejs'); /]
+                    [/ } /]
+
+
+                    [/ if (templateType === 'notifications'){ /]
+                    [/- include('__notifications__.ejs'); /]
+                    [/ } /]
+
+                    [/ if (templateType === 'withdrawals'){ /]
+                    [/- include('__withdrawal_logs__.ejs'); /]
+                    [/ } /]
+
+                    [/ if (templateType === 'settings'){ /]
+                    [/- include('__settings__.ejs'); /]
+                    [/ } /]
+
+
+                         
+           <br/>
+           <br/>
+
+           
+<div class="tradingview-widget-container">
+  <div id="tradingview_3c6b2"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">BTCUSDT Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": '100%',
+  "height": 610,
+  "symbol": "BINANCE:BTCUSDT",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_3c6b2"
+}
+  );
+  </script>
+</div>
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </main>
+
+        [/- include('__footer__.ejs');/]
+
+
+
+    </body>
+
+</html>
