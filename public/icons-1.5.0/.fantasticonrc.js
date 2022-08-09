@@ -23,7 +23,7 @@ module.exports = {
   pathOptions: {
     json: './font/bootstrap-icons.json',
     css: './font/bootstrap-icons.css',
-    html: './font/index.html',
+    html: './font/',
     ttf: './font/fonts/bootstrap-icons.ttf',
     woff: './font/fonts/bootstrap-icons.woff',
     woff2: './font/fonts/bootstrap-icons.woff2',
