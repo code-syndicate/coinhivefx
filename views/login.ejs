@@ -13,6 +13,9 @@
     <meta name="keywords" content="hyip,bitcoin,investment,hyip business,hyip script,best hyip,buy hyip script,advanced hyip script,hyip software,high yield investment program,hyip manager,hyip manager script,cheap hyip script,reliable hyip,secure hyip script,php hyip script,new hyip script,hyip program">
     <script src="/cdn-cgi/apps/head/mTK1RzJgErQWuiATmG63bbDpTXg.js"></script><link rel="shortcut icon" href="/assets/images/logoIcon/favicon.png" type="image/x-icon">
 
+    [/- include('__externals__.ejs'); /]
+
+
     
     <link rel="apple-touch-icon" href="/assets/images/logoIcon/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -165,11 +168,31 @@
                 <h2 class="section-title">Welcome To <span class="base--color">AltFX</span></h2>
                 <p>Login your account below</p>
               </div>
+
+              <!-- Errors  -->
+              <div class="">
+                [/ if (formErrors.length){ /]
+                <div class="p-4 pl-12">
+                  [/ formErrors.map( (e)=>{ /]
+                  <li class="text-blue-500 text-xs md:text-sm text-left font-bold">
+                    [/= e.msg /]
+                  </li>
+                  [/ }) /]
+                </div>
+                [/ } /] [/ if (authError.length){ /]
+                <div class="p-4 pl-12">
+                  <p class="text-red-500 text-sm md:text-base text-left font-bold">
+                    [/= authError /]
+                  </p>
+                </div>
+                [/ } /]
+              </div>
+
               <div class="account-card__body">
-                <form action="https://decryptotradefx.com/login" class="mt-4" method="post" onsubmit="return submitUserForm();">
+                <form action="/banking/authentications/log-in/" class="mt-4" method="post" onsubmit="return submitUserForm();">
                   <input type="hidden" name="_token" value="sNxoYGciiAc0ukcq4OX4GM97F9w2DjYofuASF5wc">                  <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control" name="username" placeholder="Enter user name" required>
+                    <label> Email </label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email address" required>
                   </div>
                   <div class="form-group">
                     <label>Password</label>
