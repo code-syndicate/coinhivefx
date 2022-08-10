@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="aos.css"/>
-    <title>[/= siteName/] | [/= tagline /]</title>
-
-    [/- include('__externals__.ejs'); /]
-
+    <title>AltFX - dashboard</title>
 </head>
 <body class="bg-gray-900">
     
     
     
-    <section class="bg-cover" style="background-image:url('/aleksi.jpg');">
+    <section class="bg-cover" style="background-image:url('image/aleksi.jpg');">
 
     
     
@@ -29,14 +26,14 @@
             <div class="flex flex-wrap items-center justify-between py-6">
               <div class="w-1/2 md:w-auto">
                 <a href="">
-                  <img src="/logo.png" alt="" height="200" width="200">
+                  <img src="image/logo.png" alt="" height="200" width="200">
                 </a>
               </div>
               <i class="bi bi-person text-white relative left-12 md:hidden bg-yellow-600 p-3 rounded-md"></i>
       
               <label for="menu-toggle" class="pointer-cursor md:hidden block"><svg class="fill-current text-white"
                   xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                  <title>Menu</title>
+                  <title>menu</title>
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg></label>
       
@@ -76,10 +73,10 @@
             
           </header>
           <!-- end header -->
-          <marquee behavior="" direction="Left" class="z-50 bg-black py-2 text-white">Ethereum(ETH)  &nbsp;&nbsp;&nbsp;  Tether(USDT)  &nbsp;&nbsp;&nbsp;  Binance(BNB)  &nbsp;&nbsp;&nbsp;  Polygon(MATIC) &nbsp;&nbsp;&nbsp;   Bitcoin(BTC)</marquee>
+          <marquee behavior="" direction="Left" class="z-50 bg-black text-white">Ethereum(ETH)</marquee>
     
 
-     <div class="relative z-10 h-100 lg:mt-0 space-y-8 mt-0 py-32 md:py-48 md:ml-8 px-4" >
+     <div class="relative z-10 h-100 lg:mt-0 space-y-8 mt-0 py-56 md:ml-8">
         <div>
           <h1 class="text-white text-4xl md:text-3xl xl:text-3xl font-bold leading-tight">Dashboard
             </h1>
@@ -96,44 +93,44 @@
     </section>
 
 
-    <div class="container mx-auto my-12 px-4">
+    <div class="container mx-auto my-40">
         <div class="flex flex-col space-y-6">
             <p class="text-white font-bold text-lg">Referral Link</p>
-            <input type="text" class="border border-yellow-500  p-2 bg-transparent outline-none w-[100%] bg-yellow-100 rounded-md ">
+            <input type="text" class="border border-yellow-500 border-r-8 p-2 bg-transparent bg-yellow-100 rounded-md border-r-extra-bold">
             <div class="flex flex-col space-y-6 self-stretch md:hidden md:space-x-6">
                 <div class="bg-yellow-500 py-6  px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Deposit Wallet Balance</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-black font-semibold">Deposit Wallet Balance</p>
+                            <p class="text-white font-bold">$10</p>
 
                         </div>
-                        <i class="bi bi-currency-dollar text-yellow-500 self-center bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-currency-dollar text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
                 </div>
 
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Interest Wallet Balance</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$0</p>
+                            <p class="text-black font-semibold">Interest Wallet Balance</p>
+                            <p class="text-white font-bold">$0</p>
 
                         </div>
-                        <i class="bi bi-wallet2 text-yellow-500 bg-black self-center font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-wallet2 text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
                 </div>
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Total Invest</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$0</p>
+                            <p class="text-black font-semibold">Total Invest</p>
+                            <p class="text-white font-bold">$0</p>
 
                         </div>
-                        <i class="bi bi-currency-dollar text-yellow-500 self-center bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-currency-dollar text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
@@ -144,38 +141,38 @@
             </div>
             <div class="flex flex-col space-y-6 md:hidden md:space-x-6">
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Total Deposit</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-black font-semibold">Total Deposit</p>
+                            <p class="text-white font-bold">$10</p>
 
                         </div>
-                        <i class="bi bi-credit-card text-yellow-500 self-center bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-credit-card text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
                 </div>
 
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Total Withdraw</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-black font-semibold">Total Withdraw</p>
+                            <p class="text-white font-bold">$10</p>
 
                         </div>
-                        <i class="bi bi-cloud-arrow-down-fill self-center text-yellow-500 bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-cloud-arrow-down-fill text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
                 </div>
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
-                    <div class="flex flex-row  justify-between">
+                    <div class="flex flex-row space-x-36 justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Referral Earnings</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-black font-semibold">Referral Earnings</p>
+                            <p class="text-white font-bold">$10</p>
 
                         </div>
-                        <i class="bi bi-people-fill self-center text-yellow-500 bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
+                        <i class="bi bi-people-fill text-yellow-500 bg-black font-bold text-2xl px-4 rounded-md"></i>
 
                     </div>
 
@@ -193,7 +190,7 @@
 
     </div>
 
-    <div class="hidden md:flex md:flex-col md:space-y-4 px-4">
+    <div class="hidden md:flex md:flex-col md:space-y-4">
         <div class="flex flex-row space-x-4">
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
@@ -300,15 +297,15 @@
 
     </section>
 
-    <section style="background-image: url('/banner.jpg');" class="mt-16">
+    <section style="background-image: url('image/banner.jpg');" class="mt-16">
         <div class="p-28 items-center flex flex-col space-y-4">
             <div>
-                <img src="/logo.png" alt="" height="200" width="200" class="cover">
+                <img src="image/logo.png" alt="" height="200" width="200" class="cover">
 
             </div>
-            <div class="text-white text-sm font-light flex flex-row w-[100%] items-center space-x-4 justify-center">
-                <p>Privacy & Policy</p>        
-                <p>Terms & Conditions</p>
+            <div class="text-white text-lg font-light flex flex-row  space-x-4 justify-center">
+                <p>Privacy&Policy</p>        
+                <p>Terms&Conditions</p>
             </div>
             
 
@@ -317,7 +314,7 @@
     </section>
 
     <footer>
-     <div class="bg-black flex flex-col md:flex-row md:justify-between py-6 space-y-4 px-4">
+     <div class="bg-black flex flex-col md:flex-row md:justify-between py-6 space-y-4">
         <div class="flex flex-col">
             <h3 class="text-blue-200">Address: 66 Great Suffolk st, London SE1 OBL,UK</h3>
             <h3 class="text-blue-200">Email: support@decryptotradefx.com</h3>
@@ -341,6 +338,56 @@
     </footer>
 
     
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
