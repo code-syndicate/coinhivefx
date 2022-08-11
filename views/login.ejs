@@ -99,6 +99,35 @@
 			</div>
 		</div>
 	</div>
+
+
+
+    <!-- InfoBoard  -->
+
+    [/ let textToShow = req.flash('info') /]
+
+
+    [/ if (textToShow.length) { /]
+    <div class='fixed top-4 left-0 right-0 mx-auto  rounded bg-white md:max-w-2xl z-30 pb-6'>
+        <div class='relative p-4'>
+
+
+            <i
+               class='bi-info-circle text-xl absolute top-0 left-0 p-2 inline-block  rounded-l   rounded-t'></i>
+
+            <i onclick="this.parentElement.parentElement.style.display = 'none'"
+               class='bi-x text-xl absolute top-0 right-0 p-2 inline-block bg-gray-100 hover:bg-gray-300 text-black  cursor-pointer rounded-tr '></i>
+
+            <br /><br />
+            <p class='ml-4 text-left text-xl text-blue-500 '> [/= textToShow/] </p>
+
+        </div>
+
+
+    </div>
+    <!-- Info  -->
+
+    [/ } /]
 	
 	
     

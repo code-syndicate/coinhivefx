@@ -1,86 +1,73 @@
 <div class=" ">
+
+  <p
+  class="text-left px-6 py-6 text-2xl font-bold text-white"
+>
+  Account information
+</p>
+
   <div
-    class="flex bg-gray-700/50 flex-col justify-center space-y-8 items-center mt-6"
+    class="flex bg-gray-800 flex-col justify-center  items-center mt-6"
   >
-    <div class="px-6 py-8 rounded bg-gray-100 w-full relative">
-      <h2 class="text-left font-bold capitalize text-gray-700 text-2xl my-2">
-        Personal details
+    <div class="px-6 py-4 rounded bg-gray-800 w-full relative">
+      <h2 class="text-left font-bold  text-white text-2xl my-2">
+        Personal data
       </h2>
       <div class="py-4">
-        <p class="text-lg py-1 text-left text-gray-700">
-          Name : [/= user.firstname + ' ' + user.lastname /]
+        <p class="text-lg py-1 text-left text-white">
+          Firstname: [/= user.firstname  /]
         </p>
-        <!-- <p class='text-lg py-1 text-left text-gray-700'> Date of birth : 21/02/1991 </p> -->
-        <p class="text-lg py-1 text-left text-gray-700">
-          Address : [/= user.address.street /]
-        </p>
-      </div>
-
-      <span class="absolute top-0 right-0 text-xl p-2 cursor-pointer"
-        ><i class="bi-pencil-square text-4xl"></i> Edit
-      </span>
-    </div>
-
-    <!--
-        <div class='px-6 py-8 rounded bg-gray-100 w-full relative'>
-            <h2 class='text-left font-bold capitalize text-gray-700  text-2xl my-2'> Account
-                Settings
-            </h2>
-            <div class='py-4'>
-                <p class='text-lg py-1 text-left text-gray-700'> Language : English (United States)
-                </p>
-                <p class='text-lg py-1 text-left text-gray-700'> Timezone : 21/02/1991 </p>
-                <p class='text-lg py-1 text-left text-gray-700'> Status : Active </p>
-
-
-            </div>
-
-            <span class='absolute top-0 right-0 text-xl p-2 cursor-pointer'><i
-                   class='bi-pencil-square text-4xl  '></i> Edit
-            </span>
-        </div> -->
-
-    <div class="px-6 py-8 rounded bg-gray-100 w-full relative">
-      <h2 class="text-left font-bold capitalize text-gray-700 text-2xl my-2">
-        Email Addresses
-      </h2>
-      <div class="py-4">
-        <p class="text-lg py-1 text-left text-gray-700">
-          Email : [/= user.email /]
+        <!-- <p class='text-lg py-1 text-left text-white'> Date of birth : 21/02/1991 </p> -->
+        <p class="text-lg py-1 text-left text-white">
+          Lastname: [/= user.lastname /]
         </p>
       </div>
 
-      <span class="absolute top-0 right-0 text-xl p-2 cursor-pointer"
-        ><i class="bi-pencil-square text-4xl"></i> Edit
-      </span>
+     
     </div>
 
-    <div class="px-6 py-8 rounded bg-gray-100 w-full relative">
-      <h2 class="text-left font-bold capitalize text-gray-700 text-2xl my-2">
-        Phone
+   
+
+    <div class="px-6 py-4 rounded bg-gray-800 w-full relative">
+      <h2 class="text-left font-bold  text-white text-2xl my-2">
+        Email Address
       </h2>
       <div class="py-4">
-        <p class="text-lg py-1 text-left text-gray-700">Mobile : NA</p>
+        <p class="text-lg py-1 text-left text-white">
+          Email: [/= user.email /]
+        </p>
       </div>
 
-      <span class="absolute top-0 right-0 text-xl p-2 cursor-pointer"
-        ><i class="bi-pencil-square text-4xl"></i> Edit
-      </span>
+     
     </div>
 
-    <div class="px-6 py-8 rounded bg-gray-100 w-full relative">
-      <h2 class="text-left font-bold capitalize text-gray-700 text-2xl my-2">
+    <div class="px-6 py-4 rounded bg-gray-800 w-full relative">
+      <h2 class="text-left font-bold  text-white text-2xl my-2">
+        Residential Info
+      </h2>
+      <div class="py-4">
+        <p class="text-lg py-1 text-left text-white"> Country: NA</p>
+        <p class="text-lg py-1 text-left text-white"> Country code: NA</p>
+
+      </div>
+
+     
+    </div>
+
+    <div class="px-6 py-4 rounded bg-gray-800 w-full relative">
+      <h2 class="text-left font-bold  text-white text-2xl my-2">
         Security
       </h2>
       <div class="py-4">
-        <p class="text-lg py-1 text-left text-gray-700">
-          Password : **************
+        <p class="text-lg py-1 text-left text-white">
+          Email verified: YES
+        </p>
+        <p class="text-lg py-1 text-left text-white">
+          Password: ***********************
         </p>
       </div>
 
-      <span class="absolute top-0 right-0 text-xl p-2 cursor-pointer"
-        ><i class="bi-pencil-square text-4xl"></i> Edit
-      </span>
+     
     </div>
   </div>
 </div>

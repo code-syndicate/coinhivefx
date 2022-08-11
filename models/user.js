@@ -11,17 +11,6 @@ function genReferralCode() {
 	return nanoid(5);
 }
 
-function genAcctNum() {
-	const len = 10;
-	let acctNum = '';
-
-	for (let i = 0; i < len; ++i) {
-		const num = '' + Math.floor(Math.random() * 9);
-		acctNum = acctNum.concat(num);
-	}
-
-	return acctNum;
-}
 
 const userSchema = mongoose.Schema({
 	firstname: String,
@@ -38,19 +27,10 @@ const userSchema = mongoose.Schema({
 	hasVerifiedEmailAddress: {type: Boolean, default: true},
 	verificationCode: {type: String, default: genVerificationCode},
 	referralCode: {type: String, default: genReferralCode},
-	account: {
-		accountNumber: {type: String, default: genAcctNum, unique: true},
-		accountType: {type: String, default: 'Savings'},
-		balance: {type: Number, default: 0, min: 0},
-		bonus: {type: Number, default: 0, min: 0},
-	},
+	
 
 	address: {
 		country: String,
-		state: String,
-		city: String,
-		street: String,
-		zipcode: String,
 	},
 	permissions: [String],
 });

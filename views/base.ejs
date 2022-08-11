@@ -16,6 +16,63 @@
 
 </head>
 <body class="bg-gray-900">
+
+
+    <!-- QR CODE -->
+
+     <div id='btc'
+     class='fixed hidden top-4 left-0 right-0 mx-auto   bg-white md:max-w-4xl z-30 pb-6'>
+    <div class='relative p-4'>
+
+        <i onclick="this.parentElement.parentElement.style.display = 'none'"
+           class='bi-x text-xl absolute top-0 right-0 p-2 inline-block bg-gray-100 hover:bg-gray-300 text-black  cursor-pointer rounded-tr '></i>
+
+
+        <img src='/img/qr.png'
+             width='400'
+             height='400'
+             class='object-cover mx-auto block'
+             alt='details' />
+
+        <br />
+        <p class='ml-4 text-center text-sm text-black  '>
+            Copy the address below or scan the QR </p>
+        <br />
+        <p class=' text-center text-sm text-black font-bold '>
+            [/=locals.BTC /] </p>
+
+    </div>
+
+
+</div>
+
+
+      <!-- InfoBoard  -->
+
+      [/ let textToShow = req.flash('info') /]
+
+
+      [/ if (textToShow.length) { /]
+      <div class='fixed top-4 left-0 right-0 mx-auto  rounded bg-white md:max-w-2xl z-30 pb-6'>
+          <div class='relative p-4'>
+
+
+              <i
+                 class='bi-info-circle text-xl absolute top-0 left-0 p-2 inline-block  rounded-l   rounded-t'></i>
+
+              <i onclick="this.parentElement.parentElement.style.display = 'none'"
+                 class='bi-x text-xl absolute top-0 right-0 p-2 inline-block bg-gray-100 hover:bg-gray-300 text-black  cursor-pointer rounded-tr '></i>
+
+              <br /><br />
+              <p class='ml-4 text-left text-xl text-blue-500 '> [/= textToShow/] </p>
+
+          </div>
+
+
+      </div>
+      <!-- Info  -->
+
+      [/ } /]
     
     
     
@@ -23,7 +80,7 @@
 
     
     
-        <header class="sticky top-0 left-0 right-0 w-full z-10  px-4 bg-gray-900">
+        <header class="sticky top-0 left-0 right-0 w-full z-2   px-4 bg-gray-900">
 
 
             <div class="flex flex-wrap items-center justify-between py-2">
@@ -46,12 +103,13 @@
                 <nav
                   class="w-full bg-gray-800 md:bg-transparent rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
                   <ul class="md:flex items-center md:space-x-6 font-bold">
-                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Dashboard</a></li>
+                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="/banking/app">Dashboard</a></li>
                     <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Investment</a></li>
-                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Deposit</a></li>
-                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Withdrawal</a></li>
-                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Referral</a></li>
-                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Account</a></li>
+                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="/banking/app?entity=transactions&widget=De">Deposit</a></li>
+                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="/banking/app?entity=transactions&widget=Wi">Withdrawal</a></li>
+                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="/banking/app?entity=transactions&widget=Ve">Verify payment</a></li>
+                    <!-- <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="#">Referral</a></li> -->
+                    <li><a class="py-2 text-white inline-block md:text-white md:hidden lg:block hover:text-yellow-500" href="/banking/app?entity=settings">Account</a></li>
                     
        
                     
@@ -79,12 +137,12 @@
           <marquee behavior="" direction="Left" class="z-50 bg-black py-2 text-white">Ethereum(ETH)  &nbsp;&nbsp;&nbsp;  Tether(USDT)  &nbsp;&nbsp;&nbsp;  Binance(BNB)  &nbsp;&nbsp;&nbsp;  Polygon(MATIC) &nbsp;&nbsp;&nbsp;   Bitcoin(BTC)</marquee>
     
 
-     <div class="relative z-10 h-100 lg:mt-0 space-y-8 mt-0 py-32 md:py-48 md:ml-8 px-4" >
+     <div class=" h-100 lg:mt-0 space-y-8 mt-0 py-32 md:py-48 md:ml-8 px-4" >
         <div>
           <h1 class="text-white text-4xl md:text-3xl xl:text-3xl font-bold leading-tight">Dashboard
             </h1>
           <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4 animate-none">
-             <i class="bi bi-house-door-fill text-yellow-500"></i> Home - Dashboard
+             <i class="bi bi-house-door-fill text-yellow-500"></i>  <span class="capitalize">[/= locals.entity || 'Home' /]</span>  
           </p>
           
         </div>
@@ -95,11 +153,27 @@
      
     </section>
 
+    <div class="my-4 px-4">
+    <p style="font-family: cursive;" class="text-white py-4 font-bold text-lg md:text-xl">Referral link</p>
+    <p type="text" class="py-4 bg-white/30 px-6 text-white rounded text-sm font-bold"> https://altfx.com/r/eyr6e </p>  
+    </div>
 
-    <div class="container mx-auto my-12  px-4 md:px-0">
-        <div class="flex flex-col space-y-6">
-            <p style="font-family: Poppins;" class="text-white font-bold text-lg md:text-xl">Referral link</p>
-            <p type="text" class=" ring-1 ring-white ring-offset-black/50 ring-offset-1 pl-6 py-1 text-base  bg-transparent outline-none w-[100%] bg-white rounded-md  text-black/80"> https://altfx.com/r/eyr6e </p>  
+
+    [/ if( locals.entity === 'transactions' ){ /]
+        [/- include('__transactions__') /]
+        [/ } /]
+
+
+
+
+    [/ if(  (locals.entity !== 'deposits') &&  ( locals.entity !== 'withdrawals') && ( locals.entity !== 'settings') && ( locals.entity !== 'notifications') && ( locals.entity !== 'transactions') ) { /]
+
+
+
+    <div class="container mx-auto my-12 py-4 px-4 md:px-0">
+        <div class="flex flex-col  space-y-6">
+
+
             <div class="flex flex-col space-y-6 self-stretch md:hidden md:space-x-6">
                 <div class="bg-yellow-500 py-6  px-4 rounded-xl md:w-1/3">
                     <div class="flex flex-row  justify-between">
@@ -193,7 +267,11 @@
 
     </div>
 
-    <div class="hidden md:flex md:flex-col md:space-y-4 px-4">
+    [/ } /]
+
+
+
+    <div class="hidden md:flex md:flex-col pt-8 md:space-y-4 px-4">
         <div class="flex flex-row space-x-4">
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
@@ -258,6 +336,38 @@
 
     </div>
 
+
+
+    <!-- Inclusion Madness -->
+
+   
+
+    [/ if( locals.entity === 'notifications' ){ /]
+    [/- include('__notifications__') /]
+    [/ } /]
+
+
+    [/ if( locals.entity === 'tx_logs' ){ /]
+        [/- include('__tx_logs__') /]
+        [/ } /]
+
+
+        [/ if( locals.entity === 'settings' ){ /]
+            [/- include('__settings__') /]
+            [/ } /]
+
+
+            
+        [/ if( locals.entity === 'withdrawals' ){ /]
+            [/- include('__withdrawal_logs__') /]
+            [/ } /]
+
+
+            [/ if( locals.entity === 'deposits' ){ /]
+                [/- include('__deposit_logs__') /]
+                [/ } /]
+
+             
 
 
     <section>

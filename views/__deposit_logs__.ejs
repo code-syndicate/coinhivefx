@@ -1,8 +1,19 @@
-<p class="text-left px-6 py-12 text-2xl font-bold text-white">Deposit log</p>
+
+
+<p class="text-left px-6 py-12 text-2xl font-bold text-white">Deposits</p>
+
+
+
+[/ if (notifications.length === 0){ /]
+
+  <p class="text-center px-6 py-4 mb-6 bg-gray-800 text-xl  text-white"> No recent deposits at this time.</p>
+
+  [/ } else{ /]
+
 <div class="overflow-x-auto w-12/12 mx-auto md:mx-0 md:w-full">
   <table class="w-full border border-gray-600">
-    <tr class="text-center text-lg bg-black text-white font-bold">
-      <th class="py-6">Date</th>
+    <tr class="text-center text-lg bg-gray-800 text-white font-bold">
+      <th class="py-2">Date</th>
       <th>Transaction ID</th>
       <th>Amount</th>
 
@@ -14,7 +25,7 @@
     [/ deposits.map((t)=>{ /]
 
     <tr
-      class="text-center hover:bg-gray-200 cursor-pointer text-base text-black bg-gray-100"
+      class="text-center hover:bg-gray-200 cursor-pointer text-base text-black bg-gray-800"
     >
       <td class="py-4 PX-2">[/= t.date.toLocaleString() /]</td>
       <td class="px-2">[/=t.ref/]</td>
@@ -27,3 +38,4 @@
     [/ }) /]
   </table>
 </div>
+[/ } /]

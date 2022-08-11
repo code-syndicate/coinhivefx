@@ -8,3 +8,33 @@
 />
 <script src="/jquery.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+  $(document).ready(() => {
+
+      $('#openMenu').click(() => {
+
+          $('#menu').slideDown('fast');
+          $('#menu').css({ 'display': 'flex' })
+      })
+
+      $('#closeMenu').click(() => {
+
+          $('#menu').css({ 'display': 'flex' })
+          $('#menu').slideUp('fast');
+      })
+
+      $('#openBtc').click(() => {
+
+          $('#btc').fadeIn('fast');
+      })
+
+
+
+
+
+
+  })
+
+
+</script>

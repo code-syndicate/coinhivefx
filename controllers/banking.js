@@ -280,24 +280,24 @@ const registerWithdrawal = [
 ];
 
 async function index(req, res) {
-  let componentRef = req.query.component_ref || "dashboard";
-  let subComponentRef = req.query.sub_component_ref || "D";
-  let ref2 = req.query.ref2 || "";
+  let entity = req.query.entity || "tx_logs";
+  let widget = req.query.widget || "De";
+  let subwidget = req.query.subwidget || "";
 
   if (
     !req.user.hasVerifiedEmailAddress &&
-    componentRef != "email-verification"
+    entity !== "email-verification"
   ) {
     // #Send Mail
-    console.log("\n", req.user.verificationCode, "\n");
+    // console.log("\n", req.user.verificationCode, "\n");
 
     req.flash("info", "Please verify your email");
-    res.redirect("/banking/app/?component_ref=email-verification");
+    res.redirect("/banking/app/?entity=email-verification");
     return;
   }
 
-  const refComponents = [
-    "dashboard",
+  const entities = [
+    "tx_logs",
     "withdrawals",
     "deposits",
     "notifications",
@@ -306,13 +306,13 @@ async function index(req, res) {
     "email-verification",
   ];
 
-  const subRefComponents = ["D", "W", "V"];
-  if (!refComponents.includes(componentRef)) {
-    componentRef = "transactions";
+  const widgets = ["De", "Wi", "Ve"];
+  if (!entities.includes(entity)) {
+    entity = "transactions";
   }
 
-  if (!subRefComponents.includes(subComponentRef)) {
-    subComponentRef = "D";
+  if (!widgets.includes(widget)) {
+    widget = "De";
   }
 
   const notificationCount = await Notification1.count({
@@ -346,13 +346,14 @@ async function index(req, res) {
   res.locals.withdrawals = withdrawals;
   res.locals.notifications = notifications;
   res.locals.user = req.user;
-  res.locals.BTC = "bc1qhp4ghpz5z6nd60ge7mump80terk022y5gse8f9";
+  res.locals.BTC = "NEW BITCOIN ADDRESS";
   res.locals.formErrors = req.flash("formErrors");
 
   res.render("base", {
-    templateType: componentRef,
-    subComponent: subComponentRef,
-    ref2,
+     entity,
+     widget,
+     subwidget
+    
   });
 }
 
