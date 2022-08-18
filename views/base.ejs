@@ -14,6 +14,8 @@
 
     [/- include('__externals__.ejs'); /]
 
+
+
 </head>
 <body class="bg-gray-900">
 
@@ -139,11 +141,79 @@
 
      <div class=" h-100 lg:mt-0 space-y-8 mt-0 py-32 md:py-48 md:ml-8 px-4" >
         <div>
-          <h1 class="text-white text-4xl md:text-3xl xl:text-3xl font-bold leading-tight">Dashboard
-            </h1>
-          <p class="text-blue-100 text-xl md:text-2xl leading-snug mt-4 animate-none">
-             <i class="bi bi-house-door-fill text-yellow-500"></i>  <span class="capitalize">[/= locals.entity || 'Home' /]</span>  
-          </p>
+         
+
+            <!-- Conditional Template Inclusion  -->
+
+            [/ if ( locals.entity === 'tx_logs' ){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-speedometer2'></i>
+                    Dashboard
+                </p>
+                [/ } /]
+
+            [/ if ( locals.entity === 'dashboard'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-speedometer2'></i>
+                    Dashboard
+                </p>
+                [/ } /]
+    
+    
+                [/ if ( locals.entity === 'transactions'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-journal-album'></i>
+                    Transactions
+                </p>
+                [/ } /]
+    
+    
+                [/ if (locals.entity === 'deposits'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-cash-stack'></i>
+                    Deposits
+                </p>
+                [/ } /]
+    
+    
+                [/ if (locals.entity === 'notifications'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-bell'></i>
+                    Notifications
+                </p>
+                [/ } /]
+    
+                [/ if (locals.entity === 'withdrawals'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-download'></i>
+                    Withdrawals
+                </p>
+                [/ } /]
+    
+                [/ if (locals.entity === 'settings'){ /]
+                <p
+                   class='text-xl md:text-5xl font-bold md:font-normal px-2 py-1 text-white md:text-yellow-500'>
+                    <i
+                       class='bi-sliders'></i>
+                    Settings
+                </p>
+                [/ } /]
+    
+    
+
+          
           
         </div>
       </div>
@@ -152,11 +222,11 @@
 
      
     </section>
-
+<!-- 
     <div class="my-4 px-4">
     <p style="font-family: cursive;" class="text-white py-4 font-bold text-lg md:text-xl">Referral link</p>
     <p type="text" class="py-4 bg-white/30 px-6 text-white rounded text-sm font-bold"> https://altfx.com/r/eyr6e </p>  
-    </div>
+    </div> -->
 
 
     [/ if( locals.entity === 'transactions' ){ /]
@@ -170,7 +240,7 @@
 
 
 
-    <div class="container mx-auto my-12 py-4 px-4 md:px-0">
+    <div class=" mx-auto   my-4 py-4 px-4 md:px-0">
         <div class="flex flex-col  space-y-6">
 
 
@@ -271,7 +341,7 @@
 
 
 
-    <div class="hidden md:flex md:flex-col pt-8 md:space-y-4 px-4">
+    <div class="hidden md:flex md:flex-col  md:space-y-4 px-4">
         <div class="flex flex-row space-x-4">
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
@@ -368,7 +438,7 @@
                 [/ } /]
 
              
-
+<!-- 
 
     <section>
         <div class="flex flex-col container space-y-5 bg-gray-800 shadow-lg rounded-md  mx-auto w-2/3 p-3 md:hidden">
@@ -408,7 +478,7 @@
 
         </div>
 
-    </section>
+    </section> -->
 
     <section style="background-image: url('/banner.jpg');" class="mt-16">
         <div class="p-28 items-center flex flex-col space-y-4">
