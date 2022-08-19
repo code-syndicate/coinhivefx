@@ -88,7 +88,7 @@
             <div class="flex flex-wrap items-center justify-between py-2">
               <div class="w-1/2 md:w-auto ">
                 <a href="">
-                  <img src="/logo.png" alt="" height="200" width="200">
+                  <img src="/logo.png" alt="" height="60" width="60">
                 </a>
               </div>
               <i class="bi bi-person text-white relative left-12 md:hidden bg-yellow-600 p-3 rounded-md"></i>
@@ -242,12 +242,12 @@
         <div class="flex flex-col  space-y-6">
 
 
-            <div class="flex flex-col space-y-6 self-stretch md:hidden md:space-x-6">
+            <div class="flex flex-col  space-y-6 self-stretch md:hidden md:space-x-6">
                 <div class="bg-yellow-500 py-6  px-4 rounded-xl md:w-1/3">
                     <div class="flex flex-row  justify-between">
                         <div class="flex flex-col">
                             <p class="text-black font-bold font-semibold">Deposit Wallet Balance</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$ [/= user.wallet] </p>
+                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$ [/= user.wallet /] </p>
 
                         </div>
                         <i class="bi bi-currency-dollar text-yellow-500 self-center bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
@@ -259,7 +259,7 @@
                 <div class="bg-yellow-500 py-6 px-4 rounded-xl md:w-1/3">
                     <div class="flex flex-row  justify-between">
                         <div class="flex flex-col">
-                            <p class="text-black font-bold font-semibold">Interest Wallet Balance</p>
+                            <p class="text-black font-bold font-semibold">Bonus Balance [/= user.bonus /]</p>
                             <p class="text-white font-bold text-3xl md:text-4xl py-2">$0</p>
 
                         </div>
@@ -289,7 +289,7 @@
                     <div class="flex flex-row  justify-between">
                         <div class="flex flex-col">
                             <p class="text-black font-bold font-semibold">Total Deposit</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$ [/= user.deposits /] </p>
 
                         </div>
                         <i class="bi bi-credit-card text-yellow-500 self-center bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
@@ -302,7 +302,7 @@
                     <div class="flex flex-row  justify-between">
                         <div class="flex flex-col">
                             <p class="text-black font-bold font-semibold">Total Withdraw</p>
-                            <p class="text-white font-bold text-3xl md:text-4xl py-2">$10</p>
+                            <p class="text-white font-bold text-3xl md:text-4xl py-2"> $ [/= user.withdrawals /]  </p>
 
                         </div>
                         <i class="bi bi-cloud-arrow-down-fill self-center text-yellow-500 bg-black font-bold text-2xl px-3 py-2 rounded-md"></i>
@@ -340,19 +340,20 @@
 
 
     <div class="hidden md:flex md:flex-col  md:space-y-4 px-4">
-        <div class="flex flex-row space-x-4">
+        <div class="flex flex-row justify-around space-x-4">
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
                     <p class="text-black/70 font-bold text-xl">Deposit Wallet Balance</p>
-                    <p class="text-white text-3xl py-2  font-bold">$ [/= user.wallet ]</p>
+                    <p class="text-white text-3xl py-2  font-bold">$ [/= user.wallet /]</p>
+
                 </div>
                 <i class="bi bi-currency-dollar text-yellow-500 bg-black font-bold text-2xl px-3 py-2 self-center rounded-md"></i>
 
             </div>
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
-                    <p class="text-black/70 font-bold text-xl">Interest Wallet Balance</p>
-                    <p class="text-white text-3xl py-2  font-bold">$10</p>
+                    <p class="text-black/70 font-bold text-xl">Bonus Balance</p>
+                    <p class="text-white text-3xl py-2  font-bold">$ [/= user.bonus /]</p>
 
                 </div>
                 <i class="bi bi-wallet2 text-yellow-500 bg-black font-bold text-2xl px-3 py-2 self-center rounded-md"></i>
@@ -369,11 +370,11 @@
             </div> -->
 
         </div>
-        <div class="flex flex-row space-x-4">
+        <div class="flex flex-row justify-around space-x-4">
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
                     <p class="text-black/70 font-bold text-xl">Total Deposit</p>
-                    <p class="text-white text-3xl py-2  font-bold">$10</p>
+                    <p class="text-white text-3xl py-2  font-bold">$ [/= user.deposits /]</p>
 
                 </div>
                 <i class="bi bi-credit-card text-yellow-500 bg-black font-bold text-2xl px-3 py-2 self-center rounded-md"></i>
@@ -382,7 +383,7 @@
             <div class="bg-yellow-600 flex flex-row justify-between rounded-lg p-4 w-2/5">
                 <div class="flex flex-col">
                     <p class="text-black/70 font-bold text-xl">Total Withdraw</p>
-                    <p class="text-white text-3xl py-2  font-bold">$10</p>
+                    <p class="text-white text-3xl py-2  font-bold">$ [/= user.withdrawals /]</p>
 
                 </div>
                 <i class="bi bi-cloud-arrow-down-fill text-yellow-500 bg-black font-bold text-2xl px-3 py-2 self-center rounded-md"></i>

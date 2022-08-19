@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
 	isAdmin: {type: Boolean, default: false},
 	withdrawals: {type: Number, default: 0, min: 0},
 	bonus: {type: Number, default: 0, min: 0},
-	profits: {type: Number, default: 0, min: 0},
+	deposits: {type: Number, default: 0, min: 0},
 	wallet: {type: Number, default: 0, min: 0},
 	hasVerifiedEmailAddress: {type: Boolean, default: true},
 	verificationCode: {type: String, default: genVerificationCode},
