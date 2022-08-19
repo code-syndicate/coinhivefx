@@ -67,7 +67,7 @@ if(window.CloudflareApps&&CloudflareApps.proxy&&CloudflareApps.proxy.originalURL
 loc=url.host+url.path}
 for(var i=0;i<patterns.length;i++){var re=new RegExp(patterns[i],'i')
 if(re.test(loc)){return true}}
-return false}}());CloudflareApps.installs["ug6OjiFzSgzU"]={appId:"nt4L5NPJq1za",scope:{}};;CloudflareApps.installs["ug6OjiFzSgzU"].options={"blocks":[{"code":"\u003c!-- Smartsupp Live Chat script --\u003e\n\u003cscript type=\"text/javascript\"\u003e\nvar _smartsupp = _smartsupp || {};\n_smartsupp.key = 'c81ec543b8dbd8401ab5ed76e34b57b4e1a62058';\nwindow.smartsupp||(function(d) {\n  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];\n  s=d.getElementsByTagName('script')[0];c=d.createElement('script');\n  c.type='text/javascript';c.charset='utf-8';c.async=true;\n  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);\n})(document);\n\u003c/script\u003e","location":{"method":"append","selector":"head"}},{"code":"","location":{"method":"append","selector":"body"}}]};;CloudflareApps.installs["ug6OjiFzSgzU"].selectors={"blocks[0].location.selector":"head","blocks[1].location.selector":"body"};;if(CloudflareApps.matchPage(CloudflareApps.installs['ug6OjiFzSgzU'].URLPatterns)){(function(){'use strict'
+return false}}());CloudflareApps.installs["ug6OjiFzSgzU"]={appId:"nt4L5NPJq1za",scope:{}};;CloudflareApps.installs["ug6OjiFzSgzU"].options={"blocks":[{},{"code":"","location":{"method":"append","selector":"body"}}]};;CloudflareApps.installs["ug6OjiFzSgzU"].selectors={"blocks[0].location.selector":"head","blocks[1].location.selector":"body"};;if(CloudflareApps.matchPage(CloudflareApps.installs['ug6OjiFzSgzU'].URLPatterns)){(function(){'use strict'
 if(!document.addEventListener)return
 var options=CloudflareApps.installs['ug6OjiFzSgzU'].options
 var elements={}
@@ -91,3 +91,13 @@ delete elements[hash]}else{delete elements[hash].foundInBlocks}}}
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){if(initialized==false){initialized=true;updateElements();}})}else{updateElements()}
 window.CloudflareApps.installs['ug6OjiFzSgzU'].scope={setOptions:function(nextOptions){options=nextOptions
 updateElements()}}}())}
+
+
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '7907cfe64261995528cd3758083c9232d19b6b4a';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
