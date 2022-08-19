@@ -19,7 +19,7 @@ function context(req, res, next) {
 function isAdmin(req, res, next) {
 	if (!req.user.isAdmin) {
 		req.logOut();
-		req.flash('error', 'Incorrect passport or email');
+		req.flash('error', 'Incorrect password or email');
 		res.redirect('/admin/');
 	} else {
 		next();

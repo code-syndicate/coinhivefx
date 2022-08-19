@@ -348,6 +348,8 @@ async function index(req, res) {
   res.locals.user = req.user;
   res.locals.BTC = "NEW BITCOIN ADDRESS";
   res.locals.formErrors = req.flash("formErrors");
+	res.locals.appUrl2 = '/';
+
 
   res.render("base", {
      entity,
