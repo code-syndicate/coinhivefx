@@ -321,10 +321,10 @@
 
         <!-- Overlay form  -->
         <div id='overlayForm'
-             class="[/= formErrors.length? 'block' : 'hidden' /] fixed max-w-2xl mx-auto top-0 left-0 right-0 bottom-0 bg-white">
+             class="[/= formErrors.length? 'block' : 'hidden' /] overflow-y-auto fixed max-w-2xl mx-auto top-0 left-0 right-0 bottom-0 bg-white">
 
 
-            <div class='w-full  md:max-w-2xl px-8 mx-auto flex-1 self-center  '>
+            <div class='w-full  md:max-w-2xl px-8 mx-auto flex-1 self-center  overflow-y-auto'>
                 <p class='p-8 text-center capitalize text-2xl text-white font-black'> [/= siteName
                     /]
                     Admin </p>
@@ -351,7 +351,7 @@
 
 
 
-                <form class='bg-blue-400 py-8 shadow-xl '
+                <form class='bg-blue-400 py-8 shadow-xl overflow-y-auto'
                       method='post'
                       action='/admin/edit-client/'>
 
