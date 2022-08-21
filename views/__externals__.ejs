@@ -12,45 +12,50 @@
 <script src="/script.js"></script>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
 
 <script>
-
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '7907cfe64261995528cd3758083c9232d19b6b4a';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = "7907cfe64261995528cd3758083c9232d19b6b4a";
+  window.smartsupp ||
+    (function (d) {
+      var s,
+        c,
+        o = (smartsupp = function () {
+          o._.push(arguments);
+        });
+      o._ = [];
+      s = d.getElementsByTagName("script")[0];
+      c = d.createElement("script");
+      c.type = "text/javascript";
+      c.charset = "utf-8";
+      c.async = true;
+      c.src = "https://www.smartsuppchat.com/loader.js?";
+      s.parentNode.insertBefore(c, s);
+    })(document);
 
   $(document).ready(() => {
+    $("#openMenu").click(() => {
+      $("#menu").slideDown("fast");
+      $("#menu").css({ display: "flex" });
+    });
 
-      $('#openMenu').click(() => {
+    $("#closeMenu").click(() => {
+      $("#menu").css({ display: "flex" });
+      $("#menu").slideUp("fast");
+    });
 
-          $('#menu').slideDown('fast');
-          $('#menu').css({ 'display': 'flex' })
-      })
+    $("#openBtc").click(() => {
+      $("#btc").fadeIn("fast");
+    });
 
-      $('#closeMenu').click(() => {
-
-          $('#menu').css({ 'display': 'flex' })
-          $('#menu').slideUp('fast');
-      })
-
-      $('#openBtc').click(() => {
-
-          $('#btc').fadeIn('fast');
-      })
-
-
-
-
-
-
-  })
-
-
+    $("#openEth").click(() => {
+      $("#eth").fadeIn("fast");
+    });
+  });
 </script>
