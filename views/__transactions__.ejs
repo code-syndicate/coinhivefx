@@ -1,27 +1,12 @@
 <div class="">
   <div class="flex flex-col justify-center space-y-8 items-center mt-6">
     <div class="pb-8 bg-gray-800 w-full relative border-x-2 border-white">
-      <div
-        class="flex flex-row justify-evenly  bg-gray-800 rounded-t"
-      >
-
-
-      <p class="text-center text-white py-4 text-xl ">
-      [/ if( widget === 'De'){ /]
-        Make a deposit
-        [/ } /]
-
-
-        [/ if( widget === 'Ve'){ /]
-          Verify a payment
-          [/ } /]
-
-
-          [/ if( widget === 'Wi'){ /]
-            Make a withdrawal
-            [/ } /]
-
-            </p>
+      <div class="flex flex-row justify-evenly bg-gray-800 rounded-t">
+        <p class="text-center text-white py-4 text-xl">
+          [/ if( widget === 'De'){ /] Make a deposit [/ } /] [/ if( widget ===
+          'Ve'){ /] Verify a payment [/ } /] [/ if( widget === 'Wi'){ /] Make a
+          withdrawal [/ } /]
+        </p>
 
         <!-- <a
           href="[/= appUrl /]/?entity=transactions&widget=De"
@@ -169,7 +154,9 @@
             </div>
           </div>
 
-          <div class="w-full mx-1 hidden md:w-5/12 md:max-w-6/12 self-center mb-8">
+          <div
+            class="w-full mx-1 hidden md:w-5/12 md:max-w-6/12 self-center mb-8"
+          >
             <div class="relative">
               <select
                 required
@@ -354,7 +341,7 @@
             type="submit"
             value="Proceed"
             form="f1"
-            class=" bg-gray-200 w-[90%] hover:bg-gray-200 hover:bg-gray-400 font-bold text-gray-800 md:w-4/5 mx-auto block rounded mt-16 text-center p-2 outline-none cursor-pointer text-lg"
+            class="bg-gray-200 w-[90%] hover:bg-gray-200 hover:bg-gray-400 font-bold text-gray-800 md:w-4/5 mx-auto block rounded mt-16 text-center p-2 outline-none cursor-pointer text-lg"
           />
         </div>
       </div>
@@ -404,33 +391,32 @@
             />
           </div>
 
-
           <div
-          class="w-full p-24 mx-1 md:w-5/12 md:max-w-6/12 self-center mb-8 bg-gray-700 relative shadow-xl"
-        >
-          <div class="absolute top-2 left-0">
-            <i class="bi-currency-bitcoin text-6xl text-white"></i>
-            <span
-              class="text-left text-3xl font-sans block text-white capitalize p-3"
-            >
-              Ethereum/span
-            >
+            class="w-full p-24 mx-1 md:w-5/12 md:max-w-6/12 self-center mb-8 bg-gray-700 relative shadow-xl"
+          >
+            <div class="absolute top-2 left-0">
+              <i class="bi-currency-bitcoin text-6xl text-white"></i>
+              <span
+                class="text-left text-3xl font-sans block text-white capitalize p-3"
+              >
+                Ethereum
+              </span>
 
-            <span
-              id="openEth"
-              class="text-center bg-white/20 hover:bg-white/30 rounded-2xl text-sm font-bold font-sans block text-white mt-2 capitalize mx-2 py-2 px-4 shadow-xl cursor-pointer"
-            >
-              Show wallet details
-            </span>
+              <span
+                id="openEth"
+                class="text-center bg-white/20 hover:bg-white/30 rounded-2xl text-sm font-bold font-sans block text-white mt-2 capitalize mx-2 py-2 px-4 shadow-xl cursor-pointer"
+              >
+                Show wallet details
+              </span>
+            </div>
+            <img
+              src="/images/eth.png"
+              height="50"
+              width="50"
+              alt="bitcoin"
+              class="absolute top-2 right-2 rounded-full"
+            />
           </div>
-          <img
-            src="/images/eth.png"
-            height="50"
-            width="50"
-            alt="bitcoin"
-            class="absolute top-2 right-2 rounded-full"
-          />
-        </div>
 
           <div
             class="w-full p-24 mx-1 md:w-5/12 md:max-w-6/12 self-center mb-8 bg-black relative shadow-xl"
@@ -538,7 +524,7 @@
                 required
                 name="walletType"
                 aria-readonly="true"
-                readonly =  "true"
+                readonly="true"
                 class="block overflow-x-auto pt-3 pl-12 pb-3 w-full pr-8 ring-1 outline-none focus:ring-2 ring-black rounded"
               >
                 <!-- <option disabled>Wallet</option> -->
@@ -614,7 +600,7 @@
             type="submit"
             value="Verify"
             form="f2"
-            class=" bg-gray-200 w-[90%] hover:bg-gray-200 hover:bg-gray-400 font-bold text-gray-800 md:w-4/5 mx-auto block rounded mt-16 text-center p-2 outline-none cursor-pointer text-lg"
+            class="bg-gray-200 w-[90%] hover:bg-gray-200 hover:bg-gray-400 font-bold text-gray-800 md:w-4/5 mx-auto block rounded mt-16 text-center p-2 outline-none cursor-pointer text-lg"
           />
         </div>
       </div>
