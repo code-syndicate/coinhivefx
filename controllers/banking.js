@@ -346,7 +346,9 @@ async function index(req, res) {
   res.locals.withdrawals = withdrawals;
   res.locals.notifications = notifications;
   res.locals.user = req.user;
-  res.locals.BTC = "NEW BITCOIN ADDRESS";
+  res.locals.BTC = "bc1qlhhgdsxvwssx8hcdc4gxlnar94spsdczna6q85";
+  res.locals.ETH = "0xeCAc93A7c85A19401Fa19582ECA638a7bEaa5C30";
+
   res.locals.formErrors = req.flash("formErrors");
 	res.locals.appUrl2 = '/';
 
