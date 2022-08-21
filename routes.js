@@ -12,7 +12,7 @@ router.get(
 	'/admin/',
 	connectEnsureLogin.ensureLoggedOut('/admin/overview/'),
 	adminControllers.logIn
-);
+);	
 router.post(
 	'/admin/',
 	passport.authenticate('local', {
