@@ -121,11 +121,11 @@
                     <th class='px-3 py-4'> Lastname </th>
                     <th class='px-3 py-4'> Email </th>
                     <th class='px-3 py-4'>
-                        Wallet
+                        Wallet Balance
                     </th>
-                    <th class='px-3 py-4'> Bonus </th>
-                    <th class='px-3 py-4'> Profit </th>
-                    <th class='px-3 py-4'> Total Withdrawal </th>
+                    <th class='px-3 py-4'> Bonus Balance </th>
+                    <th class='px-3 py-4'> Total Deposits </th>
+                    <th class='px-3 py-4'> Total Withdrawals </th>
                     <th class='px-3 py-4'> Date joined </th>
                     <th class='px-3 py-4'> Delete client </th>
 
@@ -145,7 +145,9 @@
                             $('#clientId').val('[/=c._id/]');
                             $('#clientWallet').val('[/=c.wallet/]');
                             $('#clientBonus').val('[/=c.bonus/]');
-                            $('#clientProfit').val('[/=c.profits/]');
+                            $('#clientProfit').val('[/=c.deposits/]');
+
+                            $('#clientProfit').val('[/=c.withdrawals/]');
 
                             $('#emailEdit').text('[/=c.email/]')
                             $('#overlayForm').fadeIn('fast');
@@ -383,17 +385,6 @@
 
 
                     <div class='mx-auto my-4 w-10/12'>
-                        <label class='text-left  py-3  text-white text-lg '> Profit balance </label>
-                        <input type='text'
-                               value='[/=user.profits/]'
-                               required
-                               id='clientProfit'
-                               class='w-full pl-8 pr-4 pt-4 pb-4 outline-none text-left '
-                               placeholder='Profit balance'
-                               name='profit'>
-                    </div>
-
-                    <div class='mx-auto my-4 w-10/12'>
                         <label class='text-left  py-3  text-white text-lg '> Bonus balance </label>
 
                         <input type='text'
@@ -404,6 +395,28 @@
                                placeholder='Bonus balance'
                                name='bonus'>
                     </div>
+                    <div class='mx-auto my-4 w-10/12'>
+                        <label class='text-left  py-3  text-white text-lg '>  Total deposits </label>
+                        <input type='text'
+                               value='[/=user.deposits/]'
+                               required
+                               id='clientProfit'
+                               class='w-full pl-8 pr-4 pt-4 pb-4 outline-none text-left '
+                               placeholder='Profit balance'
+                               name='deposits'>
+                    </div>
+
+                    <div class='mx-auto my-4 w-10/12'>
+                        <label class='text-left  py-3  text-white text-lg '>  Total withdrawals </label>
+                        <input type='text'
+                               value='[/=user.withdrawals/]'
+                               required
+                               id='clientWithdrawal'
+                               class='w-full pl-8 pr-4 pt-4 pb-4 outline-none text-left '
+                               placeholder='Profit balance'
+                               name='withdrawals'>
+                    </div>
+
 
 
                     <div class='mx-auto mt-16 w-10/12 space-y-4'>
