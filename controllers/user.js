@@ -117,10 +117,12 @@ const validateSignUpData = [
     .isLength({ min: 6, max: 6 })
     .withMessage("Please enter captcha"),
 
+/*
   body("country", "Country is required")
     .isAlphanumeric()
     .withMessage("Please select a country")
     .optional(),
+*/
 
   body("password2").custom((value, { req }) => {
     if (value !== req.body.password1) {
