@@ -361,6 +361,7 @@ async function index(req, res) {
   });
 }
 
+
 module.exports = {
   index,
   registerWithdrawal,
@@ -370,3 +371,6 @@ module.exports = {
   verifyTx,
   servePageByUrl,
 };
+
+
+
