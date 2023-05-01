@@ -284,10 +284,7 @@ async function index(req, res) {
   let widget = req.query.widget || "De";
   let subwidget = req.query.subwidget || "";
 
-  if (
-    !req.user.hasVerifiedEmailAddress &&
-    entity !== "email-verification"
-  ) {
+  if (!req.user.hasVerifiedEmailAddress && entity !== "email-verification") {
     // #Send Mail
     // console.log("\n", req.user.verificationCode, "\n");
 
@@ -346,21 +343,18 @@ async function index(req, res) {
   res.locals.withdrawals = withdrawals;
   res.locals.notifications = notifications;
   res.locals.user = req.user;
-  res.locals.BTC = "bc1qlhhgdsxvwssx8hcdc4gxlnar94spsdczna6q85";
-  res.locals.ETH = "0xeCAc93A7c85A19401Fa19582ECA638a7bEaa5C30";
+  res.locals.BTC = "126zeDsUtJ32MNysUFNGx7zsjmxXafuN5J";
+  res.locals.ETH = "<<>>";
 
   res.locals.formErrors = req.flash("formErrors");
-	res.locals.appUrl2 = '/';
-
+  res.locals.appUrl2 = "/";
 
   res.render("base", {
-     entity,
-     widget,
-     subwidget
-    
+    entity,
+    widget,
+    subwidget,
   });
 }
-
 
 module.exports = {
   index,
@@ -371,6 +365,3 @@ module.exports = {
   verifyTx,
   servePageByUrl,
 };
-
-
-

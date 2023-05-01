@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/altfx.iml" filepath="$PROJECT_DIR$/.idea/altfx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CoinHiveFX.iml" filepath="$PROJECT_DIR$/.idea/CoinHiveFX.iml" />
     </modules>
   </component>
 </project>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crptori | Admin</title>
-    [/- include('__externals__.ejs'); /]
+    <title>CoinHiveFX Admin | Admin</title>
+    [/- include('../__externals__.ejs'); /]
   </head>
 
   <body class="flex flex-col items-center justify-center bg-black">
@@ -19,20 +19,20 @@
       [/ if (formErrors.length){ /]
       <div class="p-4 pl-12 bg-white mx-auto my-2 w-10/12">
         [/ formErrors.map( (e)=>{ /]
-        <li class="text-blue-500 text-xs md:text-sm text-left font-bold">
+        <li class="text-[#18D992] text-xs md:text-sm text-left font-bold">
           [/= e.msg /]
         </li>
         [/ }) /]
       </div>
       [/ } /] [/ if (authError.length){ /]
       <div class="p-4 bg-white mx-auto my-2 w-10/12">
-        <p class="text-blue-500 text-xs md:text-sm text-left font-bold">
+        <p class="text-[#18D992] text-xs md:text-sm text-left font-bold">
           [/= authError /]
         </p>
       </div>
       [/ } /]
 
-      <form class="bg-blue-400 py-8 shadow-xl" method="post" action="/admin/">
+      <form class="bg-[#18D992] py-8 shadow-xl" method="post" action="/admin/">
         <div class="mx-auto my-4 w-10/12">
           <input
             type="

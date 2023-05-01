@@ -6,7 +6,7 @@ const { body, validationResult } = require("express-validator");
 function logIn(req, res) {
   res.locals.authError = req.flash("error");
   res.locals.formErrors = req.flash("formErrors");
-  res.render("admin_login");
+  res.render("admin/admin_login");
 }
 
 async function deleteUser(req, res) {
@@ -24,7 +24,7 @@ async function deleteUser(req, res) {
 async function overview(req, res) {
   let UI = req.query.ui || "main";
 
-  const uis = ["main", "users", "deposits", "withdrawals"];
+  const uis = ["main", "users", "withdrawals", "topup", "history"];
 
   if (!uis.includes(UI)) UI = "main";
 
@@ -35,7 +35,7 @@ async function overview(req, res) {
   res.locals.authError = req.flash("error");
   res.locals.formErrors = req.flash("formErrors");
 
-  res.render("admin_overview", {
+  res.render("admin/overview", {
     clients,
     deposits,
     withdrawals,
@@ -74,7 +74,6 @@ const editClient = [
     client.bonus = req.body.bonus;
     client.deposits = req.body.deposits;
     client.withdrawals = req.body.withdrawals;
-
 
     await client.save();
     req.flash("info", ` Client ${client.email} record updated successfully`);
