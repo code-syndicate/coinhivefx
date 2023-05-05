@@ -24,7 +24,7 @@ async function deleteUser(req, res) {
 async function overview(req, res) {
   let UI = req.query.ui || "main";
 
-  const uis = ["main", "users", "withdrawals", "topup", "history"];
+  const uis = ["main", "users", "withdrawals", "topup", "history", "deposits"];
 
   if (!uis.includes(UI)) UI = "main";
 
@@ -35,7 +35,7 @@ async function overview(req, res) {
   res.locals.authError = req.flash("error");
   res.locals.formErrors = req.flash("formErrors");
 
-  res.render("admin/overview", {
+  res.render("admin/admin_overview", {
     clients,
     deposits,
     withdrawals,
